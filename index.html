@@ -1,0 +1,168 @@
+<!-- Copyright (C) 2023-2025 anonymous
+
+This file is part of PSFree.
+
+PSFree is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+PSFree is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PSFree v1.5.0 - PS4/PS5 Exploit</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
+        <style>
+            @font-face {
+                font-family: 'Liberation Mono';
+                src: url('fonts/LiberationMono-Regular.ttf');
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+            </div>
+
+            <div class="card">
+                <h2 class="card-title"></h2>
+                <div id="status-container">
+                    <p><span class="status-indicator status-running" id="status-icon"></span> <span id="status-text"></span></p>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                </div>
+                <!-- Run exploit and reset buttons removed -->
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="console"></div>
+                <!-- Payloads and settings tabs removed -->
+            </div>
+
+            <div class="tab-content active" id="tab-console">
+                <pre id="console"></pre>
+            </div>
+
+            <!-- Payloads and settings tabs removed -->
+
+            <!-- Info content moved below console -->
+            <div class="card" style="margin-top: 20px;">
+                <h2 class="card-title"></h2>
+                
+                </ul>
+               
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h2 class="card-title"></h2>
+                <ol>
+              
+            </div>
+        </div>
+
+        <script src="js/remote-logger.js"></script>
+        <script src="js/payload-manager.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="payload.js"></script>
+        <script>
+            // Initialize Remote Logger
+            document.addEventListener('DOMContentLoaded', function() {
+                // Try to get server IP from URL parameter
+                const urlParams = new URLSearchParams(window.location.search);
+                const serverIp = urlParams.get('server');
+
+                // Logger configuration
+                const loggerConfig = {
+                    enabled: true,
+                    localConsole: true
+                };
+
+                // If a server parameter is present, use it
+                if (serverIp) {
+                    loggerConfig.serverUrl = `http://${serverIp}:3000`;
+                }
+
+                // Initialize logger
+                window.RemoteLogger.init(loggerConfig);
+
+                // Log browser info
+                window.RemoteLogger.info('PSFree initialized', {
+                    userAgent: navigator.userAgent,
+                    url: window.location.href,
+                    timestamp: new Date().toISOString()
+                });
+            });
+        </script>
+        <script type="module" src="./alert.mjs"></script>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>One2 Store</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('689445278.0.webp') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .center-text {
+      text-align: center;
+      padding: 30px;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .center-text h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .center-text p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    .center-text .phone {
+      margin-top: 15px;
+      font-size: 1.4rm;
+      color: #fff;
+      direction: ltr;
+    }
+
+    .center-text .phone a {
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-text">
+    <h1>One2 Store</h1>
+    <p>اتقل تاخد حاجه نضيفه</p>
+    <div class="phone">📞 <a href="tel:01111132691">011111 32 691</a></div>
+  </div>
+</body>
+</html>
